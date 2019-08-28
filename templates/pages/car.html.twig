@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{%  block title 'Réservation' %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Réservation de votre course</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Consectetur cum deleniti, eaque earum, harum incidunt laboriosam
+            maiores molestias necessitatibus neque nisi optio provident
+            quia recusandae repellendus rerum, sunt vel voluptatem?</p>
+
+        <h1>Choissisez votre véhicule</h1>
+            <div class="row flex">
+            {% for car in listcars %}
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{ car.getCarCaption }}  </h5>
+                            <img class="" src="{{ car.getCarPhoto }}"  alt="img voiture">
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+        <h1>L'horaire</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Consectetur cum deleniti, eaque earum, harum incidunt laboriosam
+            maiores molestias necessitatibus neque nisi optio provident
+            quia recusandae repellendus rerum, sunt vel voluptatem?</p>
+
+    </div>
+
+    <div class="container"></div>
+
+{% endblock %}
